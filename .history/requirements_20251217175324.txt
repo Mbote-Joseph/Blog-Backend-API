@@ -1,0 +1,10 @@
+Django>=4.2
+djangorestframework
+djangorestframework-simplejwt
+django-filter
+django-cors-headers
+pillow
+gunicorn
+drf-spectacular
+bleach
+whitenoise
