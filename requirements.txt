@@ -7,3 +7,4 @@ pillow
 gunicorn
 drf-spectacular
 bleach
+whitenoise
