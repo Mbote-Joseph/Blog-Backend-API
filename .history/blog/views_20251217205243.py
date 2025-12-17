@@ -5,7 +5,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
 from django.db import models
 
-from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
+
 from .models import Category, Tag, Post, Comment
 from .serializers import CategorySerializer, TagSerializer, PostSerializer, CommentSerializer
 
