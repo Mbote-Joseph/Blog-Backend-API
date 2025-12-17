@@ -38,15 +38,13 @@ class PostSerializer(serializers.ModelSerializer):
         source="category.name",
         read_only=True
     )
-    tag_names = serializers.SlugRelatedField(
-        source="tags",
-        many=True,
-        read_only=True,
-        slug_field="name"
+    tags_names = serializers.CharField(
+        source = "tags.name",
+        read_only = True
     )
     class Meta:
         model = Post
-        fields = ["id", "image", "title", "content", "is_published", "created_at", "author", "category", "category_name", "tags", "tag_names"]
+        fields = ["id", "image", "title", "content", "is_published", "created_at", "author", "category", "category_name", "tags", "tags_name"]
         read_only_fields = ["created_at", "author"]
         
 class CommentSerializer(serializers.ModelSerializer):
