@@ -34,10 +34,6 @@ class TagSerializer(serializers.ModelSerializer):
         
 
 class PostSerializer(serializers.ModelSerializer):
-    category_name = serializers.CharField(
-        source="category.name",
-        read_only=True
-    )
     class Meta:
         model = Post
         fields = ["id", "image", "title", "content", "is_published", "created_at", "author", "category", "category_name", "tags"]
